@@ -1,0 +1,100 @@
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$light-color: #f8f9fa;
+$linearGradient: linear-gradient(to bottom, #007bff, #ff0000);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  background: $linearGradient;
+}
+
+header {
+  background-color: $light-color;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+
+  .header__logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: $primary-color;
+    margin-right: 50px;
+  }
+}
+
+main {
+  padding: 50px 0;
+
+  .product-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    display: flex;
+  }
+
+  .card-body {
+    margin-top: 12px;
+    background: $light-color;
+    border: none;
+    max-width: 500px;
+    align-items: center;
+    border-radius: 40px;
+
+    .buy-button {
+      width: 100px;
+      display: block;
+      margin: 50px auto;
+      background-color: $primary-color;
+      color: $light-color;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      text-align: center;
+      
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+
+    .product-info {
+      margin-top: 14px;
+    }
+
+    .product-img {
+      margin-top: 20px;
+      width: 100%;
+      height: 200px;
+      background: #007bff;
+      border-radius: 50px;
+      background-size: contain;
+      background-position: center;
+      background-image: url(https://static.skyassets.com/contentstack/assets/blt143e20b03d72047e/bltab2d565224fbb987/6319db02937b9657b5f2b803/Carousel_iPhone14_Blue_Placement01-PreOrder.png);
+      background-repeat: no-repeat;
+    }
+  } 
+}
+
+footer {
+  height: 86px;
+  background-color: $light-color;
+  color: $primary-color;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+
+  h5 {
+    margin: 0
+}
+}
